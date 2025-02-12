@@ -10,6 +10,7 @@ type Team = {
 };
 
 type Metadata = {
+  figmaLink: string | undefined;
   title: string;
   publishedAt: string;
   summary: string;

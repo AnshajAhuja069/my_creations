@@ -1,19 +1,19 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Anshaj",
+  lastName: "Ahuja",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "UI Developer",
   avatar: "/images/avatar.jpg",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  // location: "Asia/Kolkata", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "Hindi"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
@@ -29,12 +29,12 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/AnshajAhuja069",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/anshaj-ahuja-b528a11b6/",
   },
   {
     name: "X",
@@ -44,7 +44,7 @@ const social = [
   {
     name: "Email",
     icon: "email",
-    link: "mailto:example@gmail.com",
+    link: "anshajahujaa@gmail.com",
   },
 ];
 
@@ -52,11 +52,11 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
+  headline: <>Designer and Developer</>,
   subline: (
     <>
-      I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Anshaj, a User Interface Developer , I craft intuitive
+      <br /> user experiences. After hours, I Play with Designs.
     </>
   ),
 };
@@ -81,9 +81,8 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+       I am a India-based UI Developer with a passion for transforming complex challenges
+        into simple, elegant design solutions. 
       </>
     ),
   },
@@ -92,41 +91,42 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Benepik Technology Private Limited",
+        timeframe: "Aug 2024 - Present",
+        role: "UI/UX Designer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Revamped an outdated UI, implementing modern design principles
+(Material Design, accessibility standards, responsive layouts)
+to improve usability and engagement.
+          
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Worked in Phase 2 development of the flagship product, working
+closely with developers to integrate dynamic UI components and
+enhance performance.
           </>,
+           <>
+          Strengthened collaboration between UI/UX and development
+          teams, ensuring seamless integration of designs with Angular.
+         </>,
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
+        
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Jai Kisan",
+        timeframe: "Feb 2024 - April 2024",
+        role: "Intern UI/UX and Graphic Designer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+           Designed high-fidelity mockups, ensuring brand consistency
+           across digital platforms
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Conducted user research and testing, refining designs based on
+            feedback.
           </>,
         ],
         images: [],
@@ -138,12 +138,11 @@ const about = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Christ University",
+        description: <>Studied Bachelor's of Computer Application.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        
       },
     ],
   },
@@ -153,47 +152,33 @@ const about = {
     skills: [
       {
         title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+        description: <>Wireframing, Prototyping,Adobe Suit</>,
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+         
         ],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
+        title: "React",
+        description: <>Html,Css,Javascript,Rest API</>,
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+         
+        ],
+      },
+      {
+        title: "Angular",
+        description: <>Typescript,Aws,SAP BTP</>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+         
         ],
       },
     ],
   },
 };
 
-const blog = {
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
-};
+
 
 const work = {
   label: "Work",
@@ -210,76 +195,76 @@ const gallery = {
   // Images from https://pexels.com
   images: [
     {
-      src: "/images/gallery/img-01.jpg",
+      src: "/images/gallery/4.mp4",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/img-02.jpg",
+      src: "/images/gallery/6.mp4",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-03.jpg",
+      src: "/images/gallery/1.mp4",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/img-04.jpg",
+      src: "/images/gallery/5.mp4",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-05.jpg",
+      src: "/images/gallery/9.mp4",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-06.jpg",
+      src: "/images/gallery/3.mp4",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/img-07.jpg",
+      src: "/images/gallery/7.mp4",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-08.jpg",
+      src: "/images/gallery/2.mp4",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/img-09.jpg",
+      src: "/images/gallery/10.mp4",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-10.jpg",
+      src: "/images/gallery/8.mp4",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-11.jpg",
+      src: "/images/gallery/13.mp4",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/img-12.jpg",
+      src: "/images/gallery/12.mp4",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-13.jpg",
+      src: "/images/gallery/11.mp4",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-14.jpg",
+      src: "/images/gallery/14.mp4",
       alt: "image",
       orientation: "horizontal",
     },
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, work, gallery };

@@ -7,21 +7,21 @@ import { person } from "@/app/resources/content";
 import { formatDate } from "@/app/utils/formatDate";
 import ScrollToHash from "@/components/ScrollToHash";
 
-interface BlogParams {
+interface ProgramParams {
   params: {
     slug: string;
   };
 }
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
-  const posts = getPosts(["src", "app", "blog", "posts"]);
+  const posts = getPosts(["src", "app", "programs", "posts"]);
   return posts.map((post) => ({
     slug: post.slug,
   }));
 }
 
-export function generateMetadata({ params: { slug } }: BlogParams) {
-  let post = getPosts(["src", "app", "blog", "posts"]).find((post) => post.slug === slug);
+export function generateMetadata({ params: { slug } }: ProgramParams) {
+  let post = getPosts(["src", "app", "programs", "posts"]).find((post) => post.slug === slug);
 
   if (!post) {
     return;
@@ -45,7 +45,7 @@ export function generateMetadata({ params: { slug } }: BlogParams) {
       description,
       type: "article",
       publishedTime,
-      url: `https://${baseURL}/blog/${post.slug}`,
+      url: `https://${baseURL}/programs/${post.slug}`,
       images: [
         {
           url: ogImage,
@@ -61,8 +61,8 @@ export function generateMetadata({ params: { slug } }: BlogParams) {
   };
 }
 
-export default function Blog({ params }: BlogParams) {
-  let post = getPosts(["src", "app", "blog", "posts"]).find((post) => post.slug === params.slug);
+export default function Program({ params }: ProgramParams) {
+  let post = getPosts(["src", "app", "programs", "posts"]).find((post) => post.slug === params.slug);
 
   if (!post) {
     notFound();
@@ -89,7 +89,7 @@ export default function Blog({ params }: BlogParams) {
             image: post.metadata.image
               ? `https://${baseURL}${post.metadata.image}`
               : `https://${baseURL}/og?title=${post.metadata.title}`,
-            url: `https://${baseURL}/blog/${post.slug}`,
+            url: `https://${baseURL}/programs/${post.slug}`,
             author: {
               "@type": "Person",
               name: person.name,
@@ -97,8 +97,8 @@ export default function Blog({ params }: BlogParams) {
           }),
         }}
       />
-      <Button href="/blog" weight="default" variant="tertiary" size="s" prefixIcon="chevronLeft">
-        Posts
+      <Button href="/programs" weight="default" variant="tertiary" size="s" prefixIcon="chevronLeft">
+        Programs
       </Button>
       <Heading variant="display-strong-s">{post.metadata.title}</Heading>
       <Row gap="12" vertical="center">

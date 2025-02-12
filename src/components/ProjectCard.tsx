@@ -18,7 +18,7 @@ interface ProjectCardProps {
   content: string;
   description: string;
   avatars: { src: string }[];
-  link: string;
+  link: string; // Figma link prop
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -28,7 +28,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   content,
   description,
   avatars,
-  link,
+  link, // Assuming the link for Figma is passed as "link"
 }) => {
   return (
     <Column fillWidth gap="m">
@@ -74,11 +74,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               )}
               {link && (
                 <SmartLink
-                  suffixIcon="arrowUpRightFromSquare"
+                  suffixIcon="arrowRight"
                   style={{ margin: "0", width: "fit-content" }}
-                  href={link}
+                  href={link} // Assuming 'link' is the Figma link passed as a prop
                 >
-                  <Text variant="body-default-s">View project</Text>
+                  <Text variant="body-default-s">Open Figma file</Text>
                 </SmartLink>
               )}
             </Flex>
