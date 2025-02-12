@@ -1,5 +1,9 @@
 import { InlineCode } from "@/once-ui/components";
 
+const blog = {
+  
+}
+
 const person = {
   firstName: "Anshaj",
   lastName: "Ahuja",

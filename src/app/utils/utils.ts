@@ -48,6 +48,7 @@ function readMDXFile(filePath: string) {
     tag: data.tag || [],
     team: data.team || [],
     link: data.link || "",
+    figmaLink: undefined
   };
 
   return { metadata, content };

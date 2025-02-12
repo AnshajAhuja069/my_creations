@@ -54,17 +54,23 @@ export default function About() {
     {
       title: about.work.title,
       display: about.work.display,
-      items: about.work.experiences.map((experience) => experience.company),
+      items: about.work.experiences
+        .map((experience) => experience.company)
+        .filter((company): company is string => company !== undefined),
     },
     {
       title: about.studies.title,
       display: about.studies.display,
-      items: about.studies.institutions.map((institution) => institution.name),
+      items: about.studies.institutions
+        .map((institution) => institution.name)
+        .filter((name): name is string => name !== undefined),
     },
     {
       title: about.technical.title,
       display: about.technical.display,
-      items: about.technical.skills.map((skill) => skill.title),
+      items: about.technical.skills
+        .map((skill) => skill.title)
+        .filter((title): title is string => title !== undefined),
     },
   ];
   return (
